@@ -1,0 +1,490 @@
+/* --- ESTILOS BASE Y TIPOGRAFÍA --- */
+:root {
+    /* Modo CLARO (Valores por defecto) */
+    --color-principal: #007bff; /* Azul vibrante */
+    --color-secundario: #f8f9fa; /* Fondo claro */
+    --color-texto: #333;
+    --color-fondo-claro: #fff;
+    --color-fondo-oscuro: #212529;
+}
+#Logoiglesia
+{
+    height: 3em;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-texto);
+    line-height: 1.6;
+    background-color: var(--color-fondo-claro);
+    transition: background-color 0.5s, color 0.5s; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    color: var(--color-fondo-oscuro);
+    transition: color 0.5s;
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+    position: relative; /* Necesario para la capa before */
+}
+
+/* Estilos de párrafos y contenido largo */
+.section p {
+    margin-bottom: 1.5em; 
+    font-size: 1.1em; 
+}
+
+
+/* --- NAVEGACIÓN Y CABECERA (HERO) --- */
+.hero {
+    /* Mantiene la imagen de fondo */
+    background: url('image/fondo-principal.jpg') no-repeat center center/cover;
+    color: var(--color-secundario);
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.5s; /* Añadir transición para el cambio de fondo */
+}
+
+.hero::before { /* Capa oscura para mejor contraste del texto */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal);
+}
+
+.hero-content {
+    position: relative;
+    top: 9%;
+    z-index: 5;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+/* --- ESTILOS BOTÓN CLARO/OSCURO --- */
+.btn-toggle {
+    background: none;
+    border: none;
+    color: #fff; 
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.btn-toggle:hover {
+    color: var(--color-principal);
+}
+
+
+/* --- ESTILOS DE BOTONES --- */
+.btn-principal, .btn-secundario {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-principal {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+.btn-principal:hover {
+    background-color: #0056b3; 
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+/* --- SECCIONES DE CONTENIDO GENERAL --- */
+
+#nuestra-fe {
+    background-color: var(--color-fondo-claro);
+}
+
+.versiculo-destacado {
+    background-color: var(--color-secundario);
+}
+
+blockquote {
+    max-width: 700px;
+    margin: 30px auto;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #555;
+    border-left: 5px solid var(--color-principal);
+    padding-left: 20px;
+    line-height: 1.4;
+    transition: color 0.5s, border-left-color 0.5s;
+}
+
+footer {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.7em;
+    font-style: normal;
+    text-align: right;
+    color: #777;
+}
+
+
+/* --- ESTILOS PARA LA SECCIÓN DE MÚSICA --- */
+    .ministerio-musica {
+        /* *** LÍNEA ACTUALIZADA CON EL FONDO DE IMAGEN *** */
+    background-image: url('image/fondo-musica.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Mantiene proporción, cubre el área */
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    min-height: 50vh; /* Ocupa toda la altura visible */
+    }
+    /* Ajustes para pantallas muy anchas */
+@media (min-aspect-ratio: 16/9) {
+    .ministerio-musica {
+        background-size: 100% auto; /* La imagen se ajusta al ancho */
+    }
+}
+
+/* Ajustes para pantallas muy altas (por ejemplo, móviles en vertical) */
+@media (max-aspect-ratio: 4/3) {
+    .ministerio-musica {
+        background-size: auto 15%; /* La imagen se ajusta a la altura */
+    }
+}
+
+/* Ajustes para pantallas muy anchas */
+@media (min-aspect-ratio: 16/9) {
+    body {
+        background-size: 100% auto; /* se ajusta al ancho */
+    }
+}
+
+/* Ajustes para pantallas muy altas (por ejemplo, móviles en vertical) */
+@media (max-aspect-ratio: 4/3) {
+    body {
+        background-size: auto 10%; /* se ajusta a la altura */
+    }
+}
+
+
+
+
+
+
+
+
+/* Capa oscura para la sección de música para mejorar la legibilidad del texto */
+.ministerio-musica::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad según necesites */
+    z-index: -1; /* Envía la capa detrás del contenido */
+}
+
+.ministerio-musica h2,
+.ministerio-musica h3,
+.ministerio-musica p,
+.ministerio-musica ul,
+.ministerio-musica li,
+.ministerio-musica blockquote,
+.ministerio-musica footer {
+    color: #fff; /* Asegura que todo el texto dentro de la sección sea blanco */
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima de la capa ::before */
+}
+
+/* Ajustes específicos de color para elementos interactivos o de énfasis si lo necesitas */
+.ministerio-musica .musica-contenido h3 {
+    color: var(--color-principal); /* Puedes mantener el color principal para los títulos internos */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Línea más clara para fondo oscuro */
+}
+
+.ministerio-musica .estilos-musicales i {
+    color: var(--color-principal); /* Iconos con el color principal */
+}
+
+.intro-musica {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.musica-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.cita-biblica {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente para el bloque de cita */
+    border-radius: 8px;
+}
+
+
+/* --- SECCIÓN HORARIOS Y UBICACIÓN --- */
+.info-horario {
+    background-color: var(--color-secundario);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.horarios ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.horarios li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.mapa {
+    height: 300px;
+    background-color: #ddd; 
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* --- SECCIÓN CONTACTO Y FOOTER --- */
+.contacto-footer {
+    background-color: var(--color-fondo-oscuro);
+    color: #fff;
+}
+
+.contacto-footer h2 {
+    color: #fff;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contacto-footer .btn-principal {
+    background-color: var(--color-principal);
+}
+
+.redes a {
+    color: #fff;
+    font-size: 1.8em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.redes a:hover {
+    color: var(--color-principal);
+}
+
+.copyright {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8em;
+}
+
+/* ======================================= */
+/* ====== ESTILOS PARA EL MODO OSCURO ====== */
+/* ======================================= */
+
+.dark-mode {
+    --color-principal: #3a82f6; 
+    --color-secundario: #1a1a1a; 
+    --color-texto: #e4e4e4; 
+    --color-fondo-claro: #2c2c2c; 
+    --color-fondo-oscuro: #121212; 
+}
+
+.dark-mode body {
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto);
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+    color: var(--color-texto);
+}
+
+.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode .btn-toggle {
+    color: #e4e4e4;
+}
+
+.dark-mode #nuestra-fe {
+    background-color: var(--color-fondo-claro);
+}
+/* No cambiamos el fondo de .ministerio-musica en dark-mode para que la imagen se mantenga */
+/* Si quisieras una imagen diferente en dark-mode, tendrías que definirla aquí */
+
+.dark-mode .info-horario,
+.dark-mode .versiculo-destacado {
+    background-color: var(--color-secundario);
+}
+
+.dark-mode blockquote {
+    color: #b0b0b0;
+    border-left: 5px solid var(--color-principal);
+}
+
+.dark-mode footer {
+    color: #aaa;
+}
+
+.dark-mode .musica-contenido h3 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Borde más claro para fondo oscuro */
+}
+
+.dark-mode .cita-biblica {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente oscuro */
+}
+
+.dark-mode .horarios li {
+    border-bottom: 1px solid #444; 
+}
+
+.dark-mode .contacto-footer {
+    background-color: var(--color-fondo-oscuro);
+}
+
+.dark-mode .contact-form input, 
+.dark-mode .contact-form textarea {
+    background-color: #3e3e3e;
+    color: var(--color-texto);
+}
+
+.dark-mode .contact-form input::placeholder, 
+.dark-mode .contact-form textarea::placeholder {
+    color: #b0b0b0;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 10px;
+    }
+    .info-grid, .musica-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
