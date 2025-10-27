@@ -58,7 +58,7 @@ h1, h2, h3 {
 /* --- NAVEGACIÓN Y CABECERA (HERO) --- */
 .hero {
     /* Mantiene la imagen de fondo */
-    background: url('image/fondo-principal.jpg') no-repeat center center/cover;
+    background: url('fondo-principal.jpg') no-repeat center center/cover;
     color: var(--color-secundario);
     height: 65vh;
     display: flex;
@@ -216,7 +216,7 @@ footer {
 /* --- ESTILOS PARA LA SECCIÓN DE MÚSICA --- */
     .ministerio-musica {
         /* *** LÍNEA ACTUALIZADA CON EL FONDO DE IMAGEN *** */
-    background-image: url('image/fondo-musica.jpg');
+    background-image: url('fondo-musica.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; /* Mantiene proporción, cubre el área */
@@ -488,3 +488,4 @@ footer {
         text-align: center;
     }
 }
+
