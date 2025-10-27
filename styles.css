@@ -100,12 +100,19 @@ h1, h2, h3 {
 }
 
 .nav-links {
+     font-size: 1em;
     list-style: none;
     display: flex;
+    gap: 1px; /* Espacio entre botones */
 }
 @media screen and (max-width: 600px) {
     .nav-links {
-        font-size: 0.85em; /* o el tamaño que prefieras */
+        
+        font-size: 80%;
+       
+        align-items: center;     /* Centra los elementos horizontalmente */
+        justify-content: center; /* Centra verticalmente si hay espacio */
+        text-align: center;
     }
 }
 .nav-links a {
@@ -492,6 +499,7 @@ footer {
         text-align: center;
     }
 }
+
 
 
 
