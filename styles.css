@@ -260,7 +260,7 @@ footer {
 /* Ajustes para pantallas muy altas (por ejemplo, móviles en vertical) */
 @media (max-aspect-ratio: 4/3) {
     body {
-        background-size: auto 3%; /* se ajusta a la altura */
+        background-size: auto 1%; /* se ajusta a la altura */
     }
 }
 
@@ -499,6 +499,7 @@ footer {
         text-align: center;
     }
 }
+
 
 
 
